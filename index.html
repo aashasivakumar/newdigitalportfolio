@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+      
+
+        #details {
+            display: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Profile</h1>
+    </header>
+    <div class="container">
+        <img class="profile-photo" src="mango.jpg" alt="Profile Photo">
+        <h2>Aasha Sivakumar</h2>
+        <p>Computer Science Student</p>
+        <p>Email: aasha@example.com</p>
+        <p>Location: Karur, India</p>
+ </div>
+  <div class="container">
+        <button id="show-more">Show More</button>
+        <p id="details">Qualification : B.Sc (CS)<br>
+Projects : Creating a web page using Html , Css , JavaScript<br><br>
+ <img class="profile-photo" src="apple.jpg" alt="Profile Photo">
+</p>
+
+ 
+       
+    </div>
+
+    <script>
+        var showMoreButton = document.getElementById("show-more");
+        var details = document.getElementById("details");
+        
+        showMoreButton.addEventListener("click", function () {
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                showMoreButton.textContent = "Show Less";
+            } else {
+                details.style.display = "none";
+                showMoreButton.textContent = "Show More";
+            }
+        });
+    </script>
+</body>
+</html>
